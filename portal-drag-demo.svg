@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="720" viewBox="0 0 960 720" role="img" aria-labelledby="title desc">
+  <title id="title">KRS finger-drag target control demonstration</title>
+  <desc id="desc">A finger drags the original red KRS portal target through several positions on a phone screen, releases it, and the head returns to rest. Illustrative animation only.</desc>
+  <style>
+    text{font-family:Arial,Helvetica,sans-serif}
+    .drag{animation:drag 10s infinite;transform:translate(480px,431px)}
+    .finger{animation:touch 10s infinite}
+    .ring{animation:touch 10s infinite}
+    @keyframes drag{
+      0%,8%{transform:translate(480px,431px)}
+      20%{transform:translate(398px,302px)}
+      32%{transform:translate(535px,257px)}
+      44%{transform:translate(432px,354px)}
+      57%{transform:translate(551px,337px)}
+      70%,77%{transform:translate(472px,251px)}
+      86%,100%{transform:translate(480px,431px)}
+    }
+    @keyframes touch{0%,3%{opacity:0}8%,74%{opacity:1}80%,100%{opacity:0}}
+    @media(prefers-reduced-motion:reduce){.drag{animation:none;transform:translate(480px,330px)}.finger,.ring{animation:none;opacity:1}}
+  </style>
+  <defs>
+    <radialGradient id="field"><stop stop-color="#181818"/><stop offset="1" stop-color="#050505"/></radialGradient>
+    <clipPath id="screen"><rect x="290" y="25" width="380" height="670" rx="32"/></clipPath>
+  </defs>
+  <rect width="960" height="720" fill="#050505"/>
+  <rect x="277" y="12" width="406" height="696" rx="43" fill="#222" stroke="#444" stroke-width="2"/>
+  <rect x="290" y="25" width="380" height="670" rx="32" fill="#050505"/>
+  <g clip-path="url(#screen)">
+    <text x="312" y="66" fill="#f5f5f2" font-size="24" font-weight="900">KRS</text>
+    <text x="646" y="64" text-anchor="end" fill="#a9a9a3" font-size="10" letter-spacing="2">TARGET CONTROL</text>
+    <path d="M312 82H648" stroke="#292929"/>
+    <text x="312" y="110" fill="#df1f2d" font-size="9" font-weight="bold" letter-spacing="1.5">WIRELESS MOVING-TARGET TECHNOLOGY</text>
+    <text x="312" y="147" fill="#f5f5f2" font-size="26" font-weight="900" letter-spacing="-1">TRAIN BEYOND <tspan fill="#df1f2d">STATIC.</tspan></text>
+    <text x="312" y="170" fill="#a9a9a3" font-size="12">Finger-drag demonstration</text>
+    <rect x="312" y="190" width="336" height="336" fill="url(#field)" stroke="#292929"/>
+    <path d="M480 190V526" stroke="#242424"/>
+    <g class="drag">
+      <g transform="translate(-31.2,-54) scale(.24)">
+        <path d="M130 5 C45 5 0 66 0 145 L0 230 C0 291 34 329 72 345 C72 385 43 411 10 426 L10 445 L250 445 L250 426 C217 411 188 385 188 345 C226 329 260 291 260 230 L260 145 C260 66 215 5 130 5 Z" fill="#d51b12" stroke="#17120a" stroke-width="4"/>
+      </g>
+      <circle class="ring" cx="4" cy="-12" r="17" fill="none" stroke="#fff" stroke-width="2" opacity=".6"/>
+      <g class="finger" transform="translate(4,-12) rotate(-22)">
+        <path d="M-8 49V4 C-8-9 8-9 8 4V35 C11 29 22 30 24 38 C28 33 38 37 39 44 C45 39 54 45 54 54V71 C54 82 47 93 40 99V110 H0V99 C-10 92-18 80-27 68 C-34 56-24 47-16 54L-8 62Z" fill="#e7c5a8" stroke="#171717" stroke-width="3" stroke-linejoin="round"/>
+        <path d="M-3 5V14M24 40V56M39 46V61" fill="none" stroke="#bb9378" stroke-width="2" stroke-linecap="round"/>
+      </g>
+    </g>
+    <text x="312" y="551" fill="#a9a9a3" font-size="11">Pull up, left, or right. Release to spring back.</text>
+    <rect x="312" y="573" width="336" height="70" fill="#101010" stroke="#292929"/>
+    <text x="328" y="598" fill="#f5f5f2" font-size="15" font-weight="bold">AUTOMATIC MOVEMENT</text>
+    <path d="M328 622H574" stroke="#444" stroke-width="4"/><path d="M328 622H416" stroke="#df1f2d" stroke-width="4"/><circle cx="416" cy="622" r="6" fill="#df1f2d"/>
+    <text x="627" y="626" text-anchor="end" fill="#a9a9a3" font-size="11">1 sec</text>
+    <text x="480" y="669" text-anchor="middle" fill="#a9a9a3" font-size="9" letter-spacing="1">ILLUSTRATIVE DEMO · NO DEVICE CONNECTION</text>
+  </g>
+</svg>
